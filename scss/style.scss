@@ -6,6 +6,9 @@
 
 @import '../partials/layout'; // responsive grid and media queries
 
+@import url(https://fonts.googleapis.com/css?family=Varela+Round|Oswald:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic);
+
 /* -------------------------------- 
 
 Primary style
@@ -22,11 +25,11 @@ html {
 
 body {
 	font: {
-		size: 1.2rem;
-		family: $primary-font; // variables inside partials > _variables.scss
+		size: 1.5rem;
+		family: 'Open Sans', sans-serif; // variables inside partials > _variables.scss
 	}
 	color: $color-1;
-	background-color: $color-3;
+	background-color: #fff;
 }
 
 a {
@@ -39,6 +42,62 @@ a {
 Main Components 
 
 -------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+}
+h1 {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0.5em 0 0.5em;
+}
+h3 {
+  font-size: 2em;
+}
+h4 {
+  font-size: 1.5em;
+  margin: 1.414em 0 0.5em;
+}
+ol {
+  list-style: decimal;
+  margin: 1em;
+
+  li {
+	margin: 10px 0;
+  }
+}
+.hidden {
+  display: none;
+}
+.heading-container {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: #101c27;
+  padding: 2% 20%;
+  border-bottom: 1px solid rgba(0,0,0,0.10);
+
+  h1 {
+	font-size: 5rem;
+	line-height: 1;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0.5em 0 0.5em;
+  }
+
+  p {
+	font-size: 1.4rem;
+	line-height: 1.5;
+  }
+
+  ul {
+	padding: 1em;
+	margin: 1em;
+	list-style: disc;
+	text-align: left;
+  }
+}
 
 .projects-container {
 	height: 100vh;
@@ -61,6 +120,7 @@ Main Components
 		height: 100%/$items;
 	    overflow: hidden;
 		cursor: pointer;
+	    border-right: 1px solid rgba(0,0,0,1);
 		@include transition(transform 0.4s);
 
 		/* on mobile -  move items outside the viewport */
@@ -152,7 +212,6 @@ Main Components
 		.cd-single-project {
 			width: 100vw/$items;
 			height: 100%;
-			opacity: 0;
 			@include transform(translateX(0));
 			@include transition(width 0s);
 
@@ -206,7 +265,7 @@ Main Components
 			&::after {
 				height: 100vh;
 				width: 100%;
-				opacity: 0;
+				opacity: 1;
 			}
 
 			&.is-loaded {
@@ -236,7 +295,7 @@ Main Components
     	}
 
     	.cd-single-project.is-loaded::after {
-			opacity: 0;
+			opacity: 1;
 		}
 
 	    .no-touch & .cd-single-project:hover::after, .cd-single-project.is-full-width.is-loaded::after {
@@ -250,7 +309,7 @@ Main Components
 	position: absolute;
 	z-index: 1;
 	left: 0;
-    top: 100vh/($items*2);
+    top: 10%;
     @include transform(translateY(-50%));
     width: 100%;
     text-align: center;
@@ -272,8 +331,6 @@ Main Components
 	}
 
 	p {
-		font-size: 1.4rem;
-		font-family: $secondary-font;
 		font-style: italic;
 		line-height: 1.2;
 		padding: .4em 2em;
@@ -284,7 +341,7 @@ Main Components
 	@include MQ(M) {
 		top: 50vh;
 		width: 100vw/$items;
-		opacity: 0;
+		opacity: 1;
 		@include transform(translateY(-50%) translateX(-20px));
 
 		.is-loaded & {
@@ -314,8 +371,12 @@ Main Components
 
 .cd-project-info {
 	clear: both;
-	visibility: hidden;
-	opacity: 0;	
+  width: 80%;
+  	position: relative;
+    left: 10%;
+  right: 10%;
+	//visibility: hidden;
+	opacity: 1;
 	margin-top: 100vh;
 	padding: 4em 0;
 	cursor: auto;
@@ -328,12 +389,14 @@ Main Components
 		opacity: 1;
 	}
 
-	p {
-		width: 90%;
-		max-width: 800px;
-		margin: 0 auto;
-		line-height: 2;
-	}
+  p {
+	margin: 1.414em;
+	line-height: 1.5em;
+  }
+
+  h3 {
+	margin: 1.1414em 0;
+  }
 
 	@include MQ(M) {
 		position: relative;

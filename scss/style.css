@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round|Oswald:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic);
 /* -------------------------------- 
 
 Primary style
@@ -12,10 +14,10 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.2rem;
-  font-family: "PT Sans", sans-serif;
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
   color: #ffffff;
-  background-color: #101524; }
+  background-color: #fff; }
 
 a {
   color: #9e1c51;
@@ -26,6 +28,54 @@ a {
 Main Components 
 
 -------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif; }
+
+h1 {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0.5em 0 0.5em; }
+
+h3 {
+  font-size: 2em; }
+
+h4 {
+  font-size: 1.5em;
+  margin: 1.414em 0 0.5em; }
+
+ol {
+  list-style: decimal;
+  margin: 1em; }
+  ol li {
+    margin: 10px 0; }
+
+.hidden {
+  display: none; }
+
+.heading-container {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: #101c27;
+  padding: 2% 20%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .heading-container h1 {
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0.5em 0 0.5em; }
+  .heading-container p {
+    font-size: 1.4rem;
+    line-height: 1.5; }
+  .heading-container ul {
+    padding: 1em;
+    margin: 1em;
+    list-style: disc;
+    text-align: left; }
+
 .projects-container {
   height: 100vh;
   width: 100vw;
@@ -44,6 +94,7 @@ Main Components
     height: 25%;
     overflow: hidden;
     cursor: pointer;
+    border-right: 1px solid black;
     -webkit-transition: -webkit-transform 0.4s;
     -moz-transition: -moz-transform 0.4s;
     transition: transform 0.4s;
@@ -115,7 +166,6 @@ Main Components
     .projects-container .cd-single-project {
       width: 25vw;
       height: 100%;
-      opacity: 0;
       -webkit-transform: translateX(0);
       -moz-transform: translateX(0);
       -ms-transform: translateX(0);
@@ -152,7 +202,7 @@ Main Components
       .projects-container .cd-single-project::after {
         height: 100vh;
         width: 100%;
-        opacity: 0; }
+        opacity: 1; }
       .projects-container .cd-single-project.is-loaded {
         /* show items when background images have been loaded */
         opacity: 1; }
@@ -177,7 +227,7 @@ Main Components
       -moz-transition: -moz-transform 0.8s, opacity 0.5s;
       transition: transform 0.8s, opacity 0.5s; }
     .projects-container .cd-single-project.is-loaded::after {
-      opacity: 0; }
+      opacity: 1; }
     .no-touch .projects-container .cd-single-project:hover::after, .projects-container .cd-single-project.is-full-width.is-loaded::after {
       opacity: 1;
       -webkit-transform: scale(1);
@@ -190,7 +240,7 @@ Main Components
   position: absolute;
   z-index: 1;
   left: 0;
-  top: 12.5vh;
+  top: 10%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -212,8 +262,6 @@ Main Components
     line-height: 1.5;
     font-weight: 700; }
   .cd-title p {
-    font-size: 1.4rem;
-    font-family: "Merriweather", serif;
     font-style: italic;
     line-height: 1.2;
     padding: .4em 2em;
@@ -223,7 +271,7 @@ Main Components
     .cd-title {
       top: 50vh;
       width: 25vw;
-      opacity: 0;
+      opacity: 1;
       -webkit-transform: translateY(-50%) translateX(-20px);
       -moz-transform: translateY(-50%) translateX(-20px);
       -ms-transform: translateY(-50%) translateX(-20px);
@@ -253,8 +301,11 @@ Main Components
 
 .cd-project-info {
   clear: both;
-  visibility: hidden;
-  opacity: 0;
+  width: 80%;
+  position: relative;
+  left: 10%;
+  right: 10%;
+  opacity: 1;
   margin-top: 100vh;
   padding: 4em 0;
   cursor: auto;
@@ -267,10 +318,10 @@ Main Components
     visibility: visible;
     opacity: 1; }
   .cd-project-info p {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 2; }
+    margin: 1.414em;
+    line-height: 1.5em; }
+  .cd-project-info h3 {
+    margin: 1.1414em 0; }
   @media only screen and (min-width: 1024px) {
     .cd-project-info {
       position: relative;
