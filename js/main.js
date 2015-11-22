@@ -38,12 +38,11 @@ jQuery(document).ready(function($){
 			//check media query
 			var mq = window.getComputedStyle(document.querySelector('.projects-container'), '::before').getPropertyValue('content').replace(/"/g, "").replace(/'/g, ""),
 				delay = ( mq == 'mobile' ) ? 100 : 0;
-
+			$('.heading-container').removeClass('hidden');
 			$('.projects-container').removeClass('project-is-open');
 			//fade out project
 			project.animate({opacity: 0}, 800, function(){
 				project.removeClass('is-loaded');
-				$('.heading-container').removeClass('hidden');
 				$('.projects-container').find('.cd-scroll').attr('style', '');
 				setTimeout(function(){
 					project.attr('style', '').removeClass('is-full-width').find('.cd-title').attr('style', '');

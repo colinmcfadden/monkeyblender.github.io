@@ -30,6 +30,7 @@ body {
 	}
 	color: $color-1;
 	background-color: #fff;
+  margin: 0;
 }
 
 a {
@@ -44,6 +45,9 @@ Main Components
 -------------------------------- */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;
+}
+small {
+  opacity: 0.5;
 }
 h1 {
   font-size: 5rem;
