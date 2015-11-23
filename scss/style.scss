@@ -235,11 +235,11 @@ ol {
 			@include transition(width 0s);
 
 			&:first-of-type::before {
-				content: 'img/internet-img.png';
+				content: 'img/internet-img.jpg';
 			}
 
 			&:first-of-type::after {
-				background-image: url('../img/internet-img.png'); 
+				background-image: url('../img/internet-img.jpg');
 			}
 
 			&:nth-of-type(2) {
@@ -247,11 +247,11 @@ ol {
 				left: 100vw/$items;
 
 				&::before {
-					content: 'img/img-2-large.jpg';
+					content: 'img/merica.jpg';
 				}
 
 				&::after {
-					background-image: url('../img/img-2-large.jpg'); 
+					background-image: url('../img/merica.jpg');
 				} 
 			}
 
@@ -260,11 +260,11 @@ ol {
 				left: 100vw*2/$items;
 
 				&::before {
-					content: 'img/img-3-large.jpg';
+					content: 'img/microphone-small.jpg';
 				} 
 
 				&::after {
-					background-image: url('../img/img-3-large.jpg'); 
+					background-image: url('../img/microphone.jpg');
 				}
 			}
 

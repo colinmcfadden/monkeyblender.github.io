@@ -177,7 +177,7 @@ ol {
       /* never visible - this is used in jQuery to check the current MQ */
       content: 'desktop'; }
     .projects-container .heading-container {
-      position: relative !important; }
+      position: relative; }
     .projects-container .cd-single-project {
       width: 25vw;
       height: 100%;
@@ -190,23 +190,23 @@ ol {
       -moz-transition: width 0s;
       transition: width 0s; }
       .projects-container .cd-single-project:first-of-type::before {
-        content: 'img/internet-img.png'; }
+        content: 'img/internet-img.jpg'; }
       .projects-container .cd-single-project:first-of-type::after {
-        background-image: url("../img/internet-img.png"); }
+        background-image: url("../img/internet-img.jpg"); }
       .projects-container .cd-single-project:nth-of-type(2) {
         top: 0;
         left: 25vw; }
         .projects-container .cd-single-project:nth-of-type(2)::before {
-          content: 'img/img-2-large.jpg'; }
+          content: 'img/merica.jpg'; }
         .projects-container .cd-single-project:nth-of-type(2)::after {
-          background-image: url("../img/img-2-large.jpg"); }
+          background-image: url("../img/merica.jpg"); }
       .projects-container .cd-single-project:nth-of-type(3) {
         top: 0;
         left: 50vw; }
         .projects-container .cd-single-project:nth-of-type(3)::before {
-          content: 'img/img-3-large.jpg'; }
+          content: 'img/microphone-smal.jpg'; }
         .projects-container .cd-single-project:nth-of-type(3)::after {
-          background-image: url("../img/img-3-large.jpg"); }
+          background-image: url("../img/microphone.jpg"); }
       .projects-container .cd-single-project:nth-of-type(4) {
         top: 0;
         left: 75vw; }
