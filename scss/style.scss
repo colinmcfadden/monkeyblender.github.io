@@ -38,6 +38,10 @@ a {
 	text-decoration: none;
 }
 
+video {
+  width: 90%;
+}
+
 /* -------------------------------- 
 
 Main Components 
@@ -220,6 +224,10 @@ ol {
 			content: 'desktop';
 		}
 
+	  .heading-container {
+		position: relative;
+	  }
+
 		.cd-single-project {
 			width: 100vw/$items;
 			height: 100%;
@@ -350,7 +358,7 @@ ol {
 	}
 
 	@include MQ(M) {
-		top: 50vh;
+		top: 65vh;
 		width: 100vw/$items;
 		opacity: 1;
 		@include transform(translateY(-50%) translateX(-20px));
